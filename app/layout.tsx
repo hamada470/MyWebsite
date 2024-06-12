@@ -39,6 +39,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className='scroll-smooth'
     style={{scrollBehavior:'smooth', position: 'relative'}}>
+      <head>
+        <meta name="google-site-verification" content="DVTAffVH2RPC-NeYBVJtJT8PYlb-jdiZFdnJREv1Smk" />
+      </head>
       <body className={arima.className}>
       <SpeedInsights/>
       <Analytics/>
