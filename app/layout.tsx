@@ -31,7 +31,7 @@ export const metadata: Metadata = {
    }
 };
 /**<meta name="google-site-verification" 
- * content="pX1I5YnTn2oW9La3K0exIwQ9vhs1ND_13OYq4vSyvXM" /> */
+ * content="nhAv2U5msrOZrF2VywbNh4j8FcxO" /> */
 export default function RootLayout({
   children,
 }: Readonly<{
