@@ -26,12 +26,11 @@ export const metadata: Metadata = {
    robots: {index: true, follow: true},
    referrer: 'origin',
    verification: {
-    google: 'pX1I5YnTn2oW9La3K0exIwQ9vhs1ND_13OYq4vSyvXM',
+    google: 'nhAv2U5msrOZrF2VywbNh4j8FcxOrFQDG9xoRia9JjQ',
     
    }
 };
-/**<meta name="google-site-verification" 
- * content="nhAv2U5msrOZrF2VywbNh4j8FcxO" /> */
+
 export default function RootLayout({
   children,
 }: Readonly<{
