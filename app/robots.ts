@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://hamada966533108772.vercel.app/sitemap.xml',
+    sitemap: 'https://mo3lem-ceramic.vercel.app/sitemap.xml',
   }
 }
