@@ -84,7 +84,7 @@ export default function Home() {
       <Nav links={links} activeSection={activeSection} />
     </Navbar>  
     <main className='overflow-x-hidden'>
-    <section id="home" className="w-screen mb-32 h-screen bg-panner bg-no-repeat bg-cover bg-fixed flex flex-col justify-around items-center bg-blend-darken bg-black/40 pt-9">
+    <section id="home" className="w-screen mb-32 h-screen bg-panner bg-no-repeat bg-cover bg-fixed flex flex-col justify-around items-center bg-blend-darken bg-black/40 pt-9 ">
       <ShowDivOpacity>
       <div className='w-[70%] sm:w-[80%] sm:mt-5 self-center'>
       <h1 className='xl:text-8xl lg:text-7xl md:text-6xl text-4xl text-center h-[100%]  text-white font-extrabold shadow-md' style={{lineHeight: 2}}>خبراء في جميع تركيبات انواع <br/> السيراميك و الرخام و البورسلين</h1>
@@ -97,23 +97,16 @@ export default function Home() {
       الان</a></RevalCard>
     </section>
     <section id="aboutUs" className="w-screen mb-32 md:h-screen flex lg:flex-row
-    flex-col-reverse sm:justify-stretch sm:items-center lg:px-32 sm:py-32 ">
-     <RevalCard className="card md:w-[75%] lg:w-[50%] md:h-full" direction={50}>
-      {/* <p className='lg:text-4xl xl:text-5xl md:text-3xl sm:text-2xl text-black
-      flex-1 px-16 text-center' style={{lineHeight: '4rem'}}>معلم سيراميك خبره 10 سنوات في
-      المقاولات العامه بفضل الله افضل شغل واحسن جوده. فريق متخصص بترميم وتشطيب
-      المنازل والفلل والقصور من أعمال تركيب السيراميك والرخام 
-     <mark> +966533108772 </mark>
-</p> */}
-  <p className='lg:text-xl mt-4 md:mt-0 p-4 md:p-0 lg:px-10 lg:leading-[4rem] text-black
-  text-justify' style={{ letterSpacing: 1}}>
+    flex-col-reverse sm:justify-stretch sm:items-center lg:px-32 sm:py-32 px-10">
+     <RevalCard className="card md:w-[75%] lg:w-[50%] md:h-full " direction={50}>
+  <p className='lg:text-2xl/1vw text-base mt-4 p-4 md:p-0 lg:px-10 xl:leading-[4rem]  leading-[2rem] text-black text-justify' style={{ letterSpacing: 1}}>
     عزيزي الزائر اهلا بك، هل ترغب في <strong>تركيب سيراميك </strong>او <strong> تركيب رخام </strong>في شقتك الجديدة او ربما ترغب في تغير السيراميك الذي لديك بشكل اخر اكثر جاذبية و عصرية .
     هل تبحث عن <strong>ملعم سيراميك بالرياض </strong> بارع ومتخصص في عمله ، اذا انت في المكان الصيحيح، بخبرة اكثر من 10 سنوات في مجال <strong>تركيب السيراميك</strong> و <strong>تركيب الرخام </strong> و <strong>تركيب البورسلين بالرياض</strong> نستطيع ان نضمن جودة في العمل .. دقة في التسليم .. امانة في التعامل وهذه اهم الاشياء التي تنال رضا العميل و تكسب وده؛ حيث ان لدينا نخبة من افضل <strong>معلم سيراميك  في الرياض</strong> ويوجد لدينا <strong>امهر فنيين تركيب رخام وبلاط</strong> كذلك يوجد لدينا <strong>معلم تركيب بورسلين</strong> باعلي جودة واسعار تناسب الجميع.
     نقدم جميع خدمات تركيب البلاط و السيراميك و الخلع بالاعتماد علي احدث الاجهزة والتفنيات التي تزيد من سرعة العمل ، وتجنب حدوث الاخطاء الشائعة او التلفيات الغير متوقعة ، تواصل معنا الان من جميع انحاء الرياض نصلك حيث ما كنت.
   </p> 
     <mark dir='ltr' className='block mt-16 mx-auto text-center text-3xl p-2'> 0533108772 </mark>
 </RevalCard>
-<RevalCard className="card md:w-[75%] lg:w-[50%] h-full " direction={-50}>
+<RevalCard className="card md:w-[75%] lg:w-[50%] h-full w-full" direction={-50}>
 <DivTransitionOnScroll>
 <div className='flex-1 bg-image1 w-full h-[100%] min-h-[400px] bg-cover rounded-lg ' >
 </div>
@@ -187,23 +180,6 @@ export default function Home() {
     {DescriptionWithTitleArr.map(el => <DescriptionWithTitle title={el.title}
     description={el.description}/>)}
     </section>
-    
- {/*   <section id="contactUs" className="w-screen mb-20 md:h-screen flex flex-col justify-around ">
-    <h3 className='relative text-center text-5xl font-bold self-center
-     text-black mb-8'>الاتصال</h3>
-    <div className='flex flex-col-reverse md:flex-row justify-around md:h-[65%] w-full h-full items-center'>
-      <div className='flex flex-col justify-around items-stretch md:w-[50%]
-      w-full md:px-36 '>
-     { ["الاسم","الهاتف","البريد الاالكتروني"].map((input, index) => <input
-     key={index} className='p-4 outline-none border-gray-800 border-solid border-b-2'
-     placeholder={input}/>)}
-     <textarea placeholder="ملاحظات" className='p-4 outline-none border-gray-800 border-solid border-b-2' cols={50} rows={10}/>
-     <button className='mt-4 p-4 bg-gray-800 w-full text-white'>اتصل بنا </button>
-    </div>
-    <div className=' bg-image1 md:w-full md:h-[100%] bg-cover rounded-lg w-[350px] h-[350px]' >
-</div>
-</div>
-    </section>*/}
     </main>
     </IsDrawerOpenProvider>
   );
@@ -297,8 +273,6 @@ function RevalCard({ children , direction, className }: {children: ReactNode, di
   useEffect(()=>{
    flipCardRef && flipCardRef.current &&
    flipCardRef.current.addEventListener('mouseover', () => setFlip(!flip));
-  //window.addEventListener('click', () => setFlip(!flip))
-   //flipCardRef && flipCardRef.current && flipCardRef.current.addEventListener('mouseleave', () => setFlip(!flip));
   },[flipCardRef])
 
     return <div className='flex justify-center items-center' >
