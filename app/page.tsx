@@ -1,106 +1,55 @@
 'use client'
 import Navbar from '@/components/Navbar'
 import Nav from '../components/Nav'
-
-import { ReactNode, useEffect, useRef, useState } from 'react'
-import { title } from 'process'
-import { IsDrawerOpenProvider } from '@/contexts/IsDrawerOpenContext'
-import Image from 'next/image'
-import { TbTruckDelivery } from 'react-icons/tb'
-import { GrConfigure } from 'react-icons/gr'
-import { FaBoxes } from 'react-icons/fa'
-import { motion, useScroll, useTransform, useViewportScroll } from "framer-motion";
+import { useState } from 'react'
 
 export default function Home() {
-
   const [activeSection, setActiveSection] = useState('home')
-  const [closeDrawer, setCloseDrawer] = useState()
-
-  let links = [{
-    link: "home",
-  title: "الرئيسية"
-},
- {
-  link: "aboutUs",
-  title: 'من نحن'
-}, 
-{
-  link: "services",
-  title: 'الخدمات'
-}, 
-/**{
-  title: 'الاتصال بنا',
-  link: "contactUs"
-}*/
-]
-
-  useEffect(() => {
-
-      let home = document.getElementById('home')
-      let aboutUs = document.getElementById('aboutUs')
-      let services = document.getElementById('services')
-     // let contactUs = document.getElementById('contactUs')
-
-      let sections = [home, aboutUs, 
-      services, 
-      //contactUs
-      ]
-
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.2,
-      };
-
-
-    const observer = new IntersectionObserver(entries => {
-  
-      entries.forEach(entry => {
-          if(entry.isIntersecting){
-              if (entry.target.id == 'home'){
-                setActiveSection('home')
-              }
-              if (entry.target.id == 'aboutUs'){
-                setActiveSection('aboutUs')
-              }
-              if (entry.target.id == 'services'){
-                setActiveSection('services')
-              }
-           /**   if (entry.target.id == 'contactUs'){
-                setActiveSection('contactUs')
-              }*/
-          }
-      })
-  }, observerOptions)
-  
-  sections?.forEach(section => {
-    section && observer.observe(section)
-  })
-  }, [])
 
   return (
-    <IsDrawerOpenProvider>
-    <Navbar >
-      <Nav links={links} activeSection={activeSection} />
-    </Navbar>  
-    <main className='overflow-x-hidden'>
-    <section id="home" className="w-screen mb-32 h-screen bg-panner bg-no-repeat bg-cover bg-fixed flex flex-col justify-around items-center bg-blend-darken bg-black/40 pt-9 ">
-      <ShowDivOpacity>
-      <div className='w-[70%] sm:w-[80%] sm:mt-5 self-center'>
-      <h1 className='xl:text-8xl lg:text-7xl md:text-6xl text-4xl text-center h-[100%]  text-white font-extrabold shadow-md' style={{lineHeight: 2}}>خبراء في جميع تركيبات انواع <br/> السيراميك و الرخام و البورسلين</h1>
-      </div>
-      </ShowDivOpacity>
-      <RevalCard className='' direction={-50}><a href="tel:+966533108772"
-      className='border-2 w-full border-solid border-orange-700 bg-transparent
-      outline-none m-auto block
-      px-16 py-8 mt-8 text-orange-700 rounded-2xl text-3xl font-medium'>اتصل
-      الان</a></RevalCard>
-    </section>
-    <section id="aboutUs" className="w-screen mb-32 md:h-screen flex lg:flex-row
-    flex-col-reverse sm:justify-stretch sm:items-center lg:px-32 sm:py-32 px-10">
-     <RevalCard className="card md:w-[75%] lg:w-[50%] md:h-full " direction={50}>
-  <p className='lg:text-2xl/1vw text-base mt-4 p-4 md:p-0 lg:px-10 xl:leading-[4rem]  leading-[2rem] text-black text-justify' style={{ letterSpacing: 1}}>
-    عزيزي الزائر اهلا بك، هل ترغب في <strong>تركيب سيراميك </strong>او <strong> تركيب رخام </strong>في شقتك الجديدة او ربما ترغب في تغير السيراميك الذي لديك بشكل اخر اكثر جاذبية و عصرية .
+    <main className="min-h-screen bg-white text-gray-800 dir-rtl">
+      <Navbar />
+      <Nav />
+      
+      {/* القسم الرئيسي */}
+      <section id="home" className="py-12 px-4 text-center bg-gray-50">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          تفصيل مغاسل رخام وطاولات رخام بالرياض
+        </h1>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+          نقدم أحدث تصاميم مغاسل الرخام المودرن والكلاسيك، تفصيل طاولات طعام ومجالس، وتركيب جميع أنواع الرخام بأعلى دقة وأفضل الأسعار.
+        </p>
+        <div className="my-4">
+          <a 
+            href="tel:+966569962482" 
+            className="inline-block bg-yellow-400 text-black font-bold text-xl px-6 py-3 rounded-lg shadow-md"
+          >
+            0569962482
+          </a>
+        </div>
+      </section>
+
+      {/* قسم خدماتنا */}
+      <section id="services" className="py-10 px-4 max-w-4xl mx-auto">
+        <h2 className="text-2xl font-bold text-center mb-8">خدماتنا في الرخام</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="p-4 border rounded-lg shadow-sm text-center">
+            <h3 className="font-bold text-xl mb-2">تفصيل مغاسل رخام</h3>
+            <p className="text-sm text-gray-600">تصميم وتفصيل مغاسل رخام طبيعي وصناعي للمجالس والحمامات بأحجام وأشكال متعددة.</p>
+          </div>
+          <div className="p-4 border rounded-lg shadow-sm text-center">
+            <h3 className="font-bold text-xl mb-2">طاولات رخام</h3>
+            <p className="text-sm text-gray-600">تفصيل طاولات طعام وطاولات استقبال ومجالس بالرخام الفاخر حسب الطلب.</p>
+          </div>
+          <div className="p-4 border rounded-lg shadow-sm text-center">
+            <h3 className="font-bold text-xl mb-2">تركيب وصيانة</h3>
+            <p className="text-sm text-gray-600">تركيب أرضيات وواجهات رخام، جلي وتلميع وتحديث كافة أعمال الرخام بالرياض.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
     هل تبحث عن <strong>ملعم سيراميك بالرياض </strong> بارع ومتخصص في عمله ، اذا انت في المكان الصيحيح، بخبرة اكثر من 10 سنوات في مجال <strong>تركيب السيراميك</strong> و <strong>تركيب الرخام </strong> و <strong>تركيب البورسلين بالرياض</strong> نستطيع ان نضمن جودة في العمل .. دقة في التسليم .. امانة في التعامل وهذه اهم الاشياء التي تنال رضا العميل و تكسب وده؛ حيث ان لدينا نخبة من افضل <strong>معلم سيراميك  في الرياض</strong> ويوجد لدينا <strong>امهر فنيين تركيب رخام وبلاط</strong> كذلك يوجد لدينا <strong>معلم تركيب بورسلين</strong> باعلي جودة واسعار تناسب الجميع.
     نقدم جميع خدمات تركيب البلاط و السيراميك و الخلع بالاعتماد علي احدث الاجهزة والتفنيات التي تزيد من سرعة العمل ، وتجنب حدوث الاخطاء الشائعة او التلفيات الغير متوقعة ، تواصل معنا الان من جميع انحاء الرياض نصلك حيث ما كنت.
   </p> 
