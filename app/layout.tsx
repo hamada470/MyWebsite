@@ -1,4 +1,4 @@
-import Script from "next/script";
+ import Script from "next/script";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className='scroll-smooth' style={{ scrollBehavior: 'smooth', position: 'relative' }}>
+    <html lang="ar" dir="rtl" translate="no" className='scroll-smooth' style={{ scrollBehavior: 'smooth', position: 'relative' }}>
       <head>
       </head>
       <body className={arima.className}>
