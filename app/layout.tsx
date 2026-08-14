@@ -1,33 +1,32 @@
-import type { Metadata } from "next";
-import { Inter, Arima } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import WhatsAppBtn from '../components/WhatsAppBtn'
-import PhoneBtn from '../components/PhoneBtn'
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import WhatsAppBtn from "../components/WhatsAppBtn";
+import PhoneBtn from "../components/PhoneBtn";
+import { Inter, Arima } from "next/font/google";
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
-const arima = Arima({subsets: ["latin"]})
+const arima = Arima({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  
-  title: "معلم سيراميك بالرياض | مبلط سيراميك بالرياض | اتصل الان 0533108772 | معلم سيراميك ورخام في الرياض | تركيب سيراميك | تركيب رخام | تركيب ارضيات سيراميك",
-  description: "خبرة اكثر من 10 سنوات في مجال تركيبات السيراميك والرخام، للتواصل الاتصال علي +966533108772",
-  keywords: ["ارضيات سيراميك","ارضيات رخام","تركيب رخام","تركيب سيراميك","فني تركيب سيراميك","بلاط","رخام",'سيراميك',"معلم سيراميك بالرياض","معلم رخام بالرياض","فني سيراميك و رخام","الرياض","رخام و سيراميك", '+966533108772', '966533108772', '0533108772', "تركيب ارضيات سيراميك", "تركيب سيراميك حمامات", "تركيب جميع انواع الرخام", "رقم مبلط في الرياض", "مبلط سيراميك في الرياض", "مبلط حي الروضة", "مبلط سيراميك بالرياض", "معلم بلاط", "مبلط", "معلم بلاط بالرياض", "تركيب بلاط", "تركيب بلاط و سيراميك", "تركيب بلاط في الرياض", "ارخص مبلط في الرياض", "مبلط رخام و بلاط"],
+  title: "معلم سيراميك بالرياض | معلم سيراميك ورخام في الرياض | تركيب سيراميك | تركيب رخام | تركيب ارضيات سيراميك",
+  description: "خبرة اكثر من 10 سنوات في مجال تركيبات السيراميك والرخام للتواصل الاتصال على: 0569962482",
+  keywords: ["معلم سيراميك بالرياض", "معلم بلاط", "تركييب بلاط", "تركيب بلاط وسيراميك", "تركيب بلاط في الرياض", "ارخص معلم في الرياض", "مبلط رخام و بلاط", "مبلط"],
   openGraph: {
-    title: "معلم سيراميك بالرياض | مبلط سيراميك بالرياض | اتصل الان 0533108772 | معلم سيراميك ورخام في الرياض | تركيب سيراميك | تركيب رخام | تركيب ارضيات سيراميك",
-  description: "خبرة اكثر من 10 سنوات في مجال تركيبات السيراميك والرخام، للتواصل الاتصال علي +966533108772",
-  phoneNumbers:['+966533108772', '966533108772', '0533108772'],
-  siteName: "معلم سيراميك بالرياض | مبلط سيراميك بالرياض | اتصل الان 0533108772 | معلم سيراميك ورخام في الرياض | تركيب سيراميك | تركيب رخام | تركيب ارضيات سيراميك",
-  tags: ["ارضيات سيراميك","ارضيات رخام","تركيب رخام","تركيب سيراميك","فني تركيب سيراميك","بلاط","رخام",'سيراميك',"معلم سيراميك بالرياض","معلم رخام بالرياض","فني سيراميك و رخام","الرياض","رخام و سيراميك", '+966533108772', '966533108772', '0533108772', "تركيب ارضيات سيراميك", "تركيب سيراميك حمامات", "تركيب جميع انواع الرخام", "رقم مبلط في الرياض", "مبلط سيراميك في الرياض", "مبلط حي الروضة", "مبلط سيراميك بالرياض", "معلم بلاط", "مبلط", "معلم بلاط بالرياض", "تركيب بلاط", "تركيب بلاط و سيراميك", "تركيب بلاط في الرياض", "ارخص مبلط في الرياض"]
-   },
-   formatDetection: {telephone: true},
-   robots: {index: true, follow: true},
-   referrer: 'origin',
-   verification: {
-    google: 'nhAv2U5msrOZrF2VywbNh4j8FcxOrFQDG9xoRia9JjQ',
-    
-   }
+    title: "معلم سيراميك بالرياض | معلم سيراميك ورخام في الرياض | تركيب سيراميك | تركيب رخام | تركيب ارضيات سيراميك",
+    description: "خبرة اكثر من 10 سنوات في مجال تركيبات السيراميك والرخام للتواصل الاتصال على: 0569962482",
+    phoneNumbers: ['966569962482', '966569962482', '966569962482'],
+    siteName: "معلم سيراميك بالرياض | معلم سيراميك ورخام في الرياض | تركيب سيراميك | تركيب رخام | تركيب ارضيات سيراميك",
+    tags: ["معلم سيراميك بالرياض", "معلم بلاط", "مبلط", "معلم بلاط بالرياض", "تركيب بلاط في الرياض", "تركيب بلاط و سيراميك", "ارخص مبلط في الرياض"],
+  },
+  formatDetection: { telephone: true },
+  robots: { index: true, follow: true },
+  referrer: 'origin',
+  verification: {
+    google: 'nhAv2U5msrOZrFZVywbNh4j0FcxDrFQDG9xoRia9JjQ',
+  }
 };
 
 export default function RootLayout({
@@ -36,21 +35,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className='scroll-smooth'
-    style={{scrollBehavior:'smooth', position: 'relative'}}>
+    <html lang="ar" dir="rtl" className='scroll-smooth' style={{ scrollBehavior: 'smooth', position: 'relative' }}>
       <head>
-        <meta name="google-site-verification" content="DVTAffVH2RPC-NeYBVJtJT8PYlb-jdiZFdnJREv1Smk" />
       </head>
       <body className={arima.className}>
-      <SpeedInsights/>
-      <Analytics/>
+        <SpeedInsights />
+        <Analytics />
         {children}
         <WhatsAppBtn />
         <PhoneBtn />
-        <footer className='w-full p-5 text-center bg-gray-700 text-white'>
-        <span>all copyright ©️ are received 2024 - 2025</span>
-        </footer>
-        </body>
+      </body>
     </html>
   );
 }
