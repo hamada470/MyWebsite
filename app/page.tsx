@@ -14,12 +14,37 @@ export default function Home() {
     {
       title: 'معلم تركيب رخام بالرياض',
       description: 'تركيب الرخام الصحيح يضمن استدامة وجمال الأرضيات والواجهات والمغاسل. يمتلك كادرنا خبرة واسعة في تركيب الرخام وجليه وتلميعه بالرياض.'
+    },
+    {
+      title: 'تفصيل وتركيب درج رخام',
+      description: 'ننفذ درج داخلي وخارجي للفلل والقصور بالرياض بتصميمات هندسية دقيقة، مع قص الأطراف وتركيب البوستر والدرج السكني والتجاري بأفضل أنواع الرخام.'
+    },
+    {
+      title: 'تركيب واجهات رخام للفلل',
+      description: 'نقدم خدمات تركيب واجهات رخام ميكانيكي وعادي للمباني والفلل والقصور، مما يعطي مظهراً فخماً ويثبت بمتانة عالية لمقاومة العوامل الجوية.'
+    },
+    {
+      title: 'جلي وتلميع الرخام والأرضيات',
+      description: 'خدمة جلي وتلميع الرخام بالكريستال وإزالة الخدوش والبقع واستعادة لمعان البريق الطبيعي للأرضيات والمغاسل والسلالم القديمة لتصبح جديدة كلياً.'
+    },
+    {
+      title: 'صيانة وترميم مغاسل وطاولات الرخام',
+      description: 'نوفر خدمات الصيانة الشاملة، معالجة الكسور، وتعديل الفواصل، وتغيير الأحواض التالفة وإعادة تلميع مغاسل وطاولات الرخام بالمنزل.'
     }
+  ]
+
+  const galleryImages = [
+    { src: '/img1.jpg', alt: 'تفصيل مغاسل رخام مودرن' },
+    { src: '/img2.jpg', alt: 'طاولات رخام مجالس' },
+    { src: '/img3.jpg', alt: 'تركيب وتفصيل رخام' },
+    { src: '/image1.jfif', alt: 'تصاميم مغاسل رخام' },
+    { src: '/image2.jfif', alt: 'طاولات طعام رخام' },
+    { src: '/image3.jfif', alt: 'أعمال تركيب رخام بالرياض' },
   ]
 
   return (
     <main className="min-h-screen bg-white text-gray-800 dir-rtl">
-      {/* هيدر بسيط */}
+      {/* هيدر علوي */}
       <header className="bg-gray-900 text-white py-4 px-6 flex justify-between items-center">
         <h1 className="text-xl font-bold">تفصيل مغاسل وطاولات رخام</h1>
         <a href="tel:0569962482" className="bg-yellow-400 text-black px-4 py-2 rounded-lg font-bold">
@@ -42,6 +67,23 @@ export default function Home() {
           >
             0569962482
           </a>
+        </div>
+      </section>
+
+      {/* معرض الصور المرفوعة */}
+      <section className="py-12 px-6 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">معرض أعمالنا</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {galleryImages.map((img, idx) => (
+            <div key={idx} className="overflow-hidden rounded-xl shadow-md border bg-gray-50 border-gray-200">
+              <img 
+                src={img.src} 
+                alt={img.alt} 
+                className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300"
+              />
+              <p className="p-3 text-center font-bold text-gray-700">{img.alt}</p>
+            </div>
+          ))}
         </div>
       </section>
 
