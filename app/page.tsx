@@ -22,15 +22,18 @@ export default function Home() {
   ]
 
   return (
-    <main className="min-h-screen bg-white text-gray-800 dir-rtl">
+    <main className="min-h-screen bg-white text-gray-800" style={{ direction: 'rtl', textAlign: 'right' }}>
+      {/* الهيدر مع أيقونة اتصال */}
       <header className="bg-gray-900 text-white py-4 px-6 flex justify-between items-center">
-        <h1 className="text-xl font-bold">تفصيل مغاسل وطاولات رخام</h1>
-        <a href="tel:0569962482" className="bg-yellow-400 text-black px-4 py-2 rounded-lg font-bold">0569962482</a>
+        <h1 className="text-xl font-bold">مغاسل رخام</h1>
+        <a href="tel:0569962482" className="bg-yellow-400 text-black px-4 py-2 rounded-lg font-bold flex items-center gap-2">
+          <span>📞</span> اتصل
+        </a>
       </header>
 
       <section className="bg-gray-800 text-white py-16 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">تفصيل مغاسل رخام وطاولات رخام بالرياض</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">تفصيل مغاسل وطاولات رخام بالرياض</h2>
           <a href="tel:0569962482" className="inline-block bg-yellow-400 text-black font-bold text-2xl px-8 py-3 rounded-lg shadow-lg">0569962482</a>
         </div>
       </section>
@@ -57,6 +60,14 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* زر الاتصال الثابت في الأسفل */}
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-gray-900 text-white text-center shadow-2xl z-50">
+        <a href="tel:0569962482" className="flex justify-center items-center gap-2 font-bold text-xl">
+          <span>📞</span> اتصل بنا الآن: 0569962482
+        </a>
+      </div>
+      <div className="h-24"></div>
     </main>
   )
 }
