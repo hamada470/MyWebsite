@@ -23,12 +23,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "تفصيل مغاسل رخام | طاولات رخام | تركيب رخام بالرياض",
     description: "افضل ورشة تفصيل مغاسل رخام وطاولات رخام طبيعي ومصناعي بالرياض، تركيب وجلي رخام بأعلى جودة للتواصل الاتصال على: 0569962482",
-    phoneNumbers: ['966569962482', '966569962482', '966569962482'],
+    phoneNumbers: ['966569962482'],
     siteName: "تفصيل وتركيب رخام بالرياض",
-    tags: [
-      "تفصيل مغاسل رخام", "طاولات رخام", "تركيب رخام بالرياض", "مغاسل رخام", "طاولات رخام بالرياض",
-      "معلم رخام", "رخام طبيعي", "رخام صناعي", "مغاسل مودرن", "تفصيل رخام بالرياض"
-    ]
   },
   formatDetection: { telephone: true },
   robots: { index: true, follow: true },
@@ -44,8 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" translate="no" className="scroll-smooth" style={{ scrollBehavior: 'smooth' }}>
+    <html lang="ar" dir="rtl" translate="no" className="scroll-smooth">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={arima.className}>
         <SpeedInsights />
@@ -54,21 +51,6 @@ export default function RootLayout({
         <WhatsAppBtn />
         <PhoneBtn />
       </body>
-    </html>
-  );
-}
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="ar" dir="rtl">
-      <head>
-        {/* هذا هو الكود المسؤول عن إصلاح حجم الموقع على الهواتف */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body>{children}</body>
     </html>
   );
 }
