@@ -57,3 +57,18 @@ export default function RootLayout({
     </html>
   );
 }
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="ar" dir="rtl">
+      <head>
+        {/* هذا هو الكود المسؤول عن إصلاح حجم الموقع على الهواتف */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}
