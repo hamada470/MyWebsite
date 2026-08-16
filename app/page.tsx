@@ -56,18 +56,21 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-white text-gray-800 pb-20" style={{ direction: 'rtl', textAlign: 'right' }}>
+    <main className="min-h-screen bg-white text-gray-800 pb-16" style={{ direction: 'rtl', textAlign: 'right' }}>
       
-      {/* الهيدر العلوي */}
-      <header className="bg-gray-900 text-white py-3 px-4 flex justify-between items-center sticky top-0 z-40 shadow-md">
-        <h1 className="text-sm md:text-xl font-bold text-yellow-400">
+      {/* الهيدر العلوي المزود بزر اتصل بنا الكبير ورقم الهاتف باللون الأصفر */}
+      <header className="bg-gray-900 text-white py-3 px-4 flex flex-col md:flex-row justify-between items-center sticky top-0 z-40 shadow-md gap-3">
+        <h1 className="text-sm md:text-xl font-bold text-yellow-400 text-center md:text-right">
           تفصيل مغاسل رخام | طاولات | مجالس | تركيب درج رخام بالرياض
         </h1>
+        
+        {/* زر اتصال بارز وكبير أعلى الشاشة */}
         <a 
           href="tel:0569962482" 
-          className="bg-yellow-400 hover:bg-yellow-500 text-black px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 text-xs md:text-sm transition"
+          className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2.5 rounded-xl font-extrabold flex items-center justify-center gap-2 text-base md:text-lg shadow-lg transition duration-200 transform hover:scale-105 w-full md:w-auto"
         >
-          اتصل بنا
+          <span>اتصل بنا:</span>
+          <span className="text-black font-black tracking-wider" style={{ direction: 'ltr' }}>0569962482</span>
         </a>
       </header>
 
@@ -119,32 +122,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* زر الواتساب العائم */}
-      <a 
-        href="https://wa.me/966569962482" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="fixed bottom-12 right-4 z-50 bg-green-600 hover:bg-green-700 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
-        aria-label="Whatsapp"
-      >
-        <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-        </svg>
-      </a>
-
-      {/* زر الاتصال العائم */}
-      <a 
-        href="tel:0569962482" 
-        className="fixed bottom-12 left-4 z-50 bg-green-600 hover:bg-green-700 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
-        aria-label="Call"
-      >
-        <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
-          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-        </svg>
-      </a>
-
-      {/* الشريط السفلي */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 text-white py-1.5 px-3 text-center shadow-lg border-t border-gray-800">
+      {/* الشريط السفلي الثابت */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 text-white py-2 px-3 text-center shadow-lg border-t border-gray-800">
         <a 
           href="tel:0569962482" 
           className="text-xs md:text-sm font-semibold text-yellow-400 hover:underline inline-flex items-center justify-center gap-2"
