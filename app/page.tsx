@@ -14,7 +14,7 @@ export default function Home() {
     },
     {
       title: 'تفصيل طاولات رخام طعام ومجالس واستقبال حسب الطلب',
-      description: 'نوفر لك ورشة تفصيل طاولات رخام مخصصة بالكامل وفقاً لرغبتك واحتياجات مساحتك. سواء كنت تبحث عن طاولات طعام رخام كبيرة للصالونات، أو طاولات مجالس خدمة صغيرة، أو طاولات قهوة وكاونترات استقبال للمكاتب والشركات، فإننا ننفذها بأعلى درجات الإتقان. يمكنك اختيار شكل القواعد (حديد مدفون، ستانلس ستيل ذهبي أو أسود، أو قواعد رخامية بالكامل)، مع معالجة سطح الرخام بمواد حماية إيطالية تمنع امتصاص السوائل والزيوت.'
+      description: 'نوفر لك ورشة تفصيل طاولات رخام مخصصة بالكامل وفقاً لرغبتك وااحتياجات مساحتك. سواء كنت تبحث عن طاولات طعام رخام كبيرة للصالونات، أو طاولات مجالس خدمة صغيرة، أو طاولات قهوة وكاونترات استقبال للمكاتب والشركات، فإننا ننفذها بأعلى درجات الإتقان. يمكنك اختيار شكل القواعد (حديد مدفون، ستانلس ستيل ذهبي أو أسود، أو قواعد رخامية بالكامل)، مع معالجة سطح الرخام بمواد حماية إيطالية تمنع امتصاص السوائل والزيوت.'
     },
     {
       title: 'تفصيل وتركيب درج رخام داخلي وخارجي باحترافية',
@@ -84,7 +84,7 @@ export default function Home() {
       {/* معرض الصور */}
       <section className="py-12 px-6 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-3 text-gray-900">معرض أعمال تفصيل وتركيب الرخام بالرياض</h2>
-        <p className="text-center text-gray-600 mb-10">نستعرض لكم صور واقعية من أعمال تفصيل المغاسل والمجالس والطاولات والدرج والتركيب والجلي</p>
+        <p className="text-center text-gray-600 mb-10">نستعرض لكم صور واقعية من أعمال تفصيل المغاسل والمجالس والطاولات والدرج والتركيب للجلي</p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {galleryImages.map((img, idx) => (
@@ -101,6 +101,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* قسم المقالات والأوصاف الطويلة المحسنة لـ SEO */}
+      <section className="py-12 px-6 max-w-4xl mx-auto bg-gray-50 rounded-2xl my-8 border border-gray-100">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">دليل خدماتنا التفصيلي لمشاريع الرخام بالرياض</h2>
+        <div className="space-y-12">
+          {articles.map((item, index) => (
+            <article key={index} className="border-b border-gray-200 pb-8 last:border-0">
+              <h3 className="text-2xl font-bold mb-4 text-yellow-600">{item.title}</h3>
+              <p className="text-base md:text-lg leading-loose text-gray-700 whitespace-pre-line">{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* فقرة الـ SEO المحلي */}
+      <section className="py-8 px-6 max-w-4xl mx-auto text-gray-600 text-sm leading-relaxed">
+        <p>
+          نحن في ورشتنا نقدم حلولاً متكاملة في <strong>تفصيل كل ما يخص الرخام بالرياض</strong>. سواء كنت تبحث عن <strong>تفصيل مجالس رخام</strong>، أو <strong>تفصيل مغاسل رخام</strong> طبيعي وصناعي للمجالس والصالات، أو <strong>تفصيل طاولات رخام</strong> طعام واستقبال، بالإضافة إلى خدمات <strong>تفصيل وتركيب درج رخام</strong>، وتوفير خيرة خبرات <strong>معلم تركيب رخام بالرياض</strong> للواجهات والأرضيات والجدران مع خدمات الجلي والتلميع.
+        </p>
+      </section>
+
+      {/* شريط الاتصال غير العائم (يتحرك في نهاية الصفحة) */}
+      <footer className="w-full py-8 px-4 bg-gray-900 text-white text-center border-t-2 border-yellow-500 mt-12">
+        <a 
+          href="tel:0569962482" 
+          className="inline-flex justify-center items-center gap-2 font-bold text-lg md:text-2xl text-yellow-400 hover:text-yellow-300 transition-colors"
+        >
+          <span>اتصل بنا الآن (معاينة واستشارة مجانية): 0569962482</span>
+        </a>
+      </footer>
+
+    </main>
+  );
+}
       {/* قسم المقالات والأوصاف الطويلة المحسنة لـ SEO */}
       <section className="py-12 px-6 max-w-4xl mx-auto bg-gray-50 rounded-2xl my-8 border border-gray-100">
         <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">دليل خدماتنا التفصيلي لمشاريع الرخام بالرياض</h2>
