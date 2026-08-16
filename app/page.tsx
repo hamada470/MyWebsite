@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { MessageCircle, Phone } from 'lucide-react';
 
 export default function Home() {
   const articles = [
@@ -65,7 +66,7 @@ export default function Home() {
         </h1>
         <a 
           href="tel:0569962482" 
-          className="bg-yellow-400 hover:bg-yellow-500 text-black px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 text-xs md:text-sm"
+          className="bg-yellow-400 hover:bg-yellow-500 text-black px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 text-xs md:text-sm transition"
         >
           اتصل بنا
         </a>
@@ -78,29 +79,80 @@ export default function Home() {
             أفضل معلم تركيب وتفصيل رخام بالرياض
           </h2>
           <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-            نقدم خدمات تفصيل مغاسل رخام طبيعي وصناعي، تفصيل طاولات رخام، تفصيل قونطرات، تفصيل مشبات، وشبابيك وإطارات الرخام، بالإضافة إلى تركيب أرضيات ودرج وواجهات الرخام وصيانة وتعديل القطع القديمة وتغيير الأحواض التالفة.
+            مهما كانت فكرتك أو التصميم الذي ترغب في تطبيقه من الرخام، فإن ورشتنا بالرياض مستعدة لتحويله لواقع. نقدم خدمات تفصيل مغاسل رخام طبيعي وصناعي، تفصيل طاولات رخام، تفصيل قونطرات، تفصيل مشبات، وشبابيك وإطارات الرخام، بالإضافة إلى تركيب أرضيات ودرج وواجهات الرخام وصيانة وتعديل القطع القديمة وتغيير الأحواض التالفة.
           </p>
         </div>
       </section>
 
-      {/* الأوصاف والخدمات */}
-      <section className="max-w-5xl mx-auto py-8 px-4">
-        <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-6 text-center">
-          دليل خدماتنا التفصيلية لمشاريع الرخام بالرياض
+      {/* قسم المقالات والأوصاف */}
+      <section className="max-w-5xl mx-auto py-10 px-4">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
+          خدماتنا المتميزة في تفصيل وتركيب الرخام
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {articles.map((item, index) => (
-            <div key={index} className="bg-gray-50 border border-gray-200 p-4 rounded-lg shadow-sm">
-              <h4 className="text-base font-bold text-yellow-600 mb-1">{item.title}</h4>
-              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">{item.description}</p>
+            <div key={index} className="bg-gray-50 border border-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+              <h4 className="text-lg font-bold text-yellow-600 mb-2">{item.title}</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* معرض الصور */}
-      <section className="bg-gray-100 py-8 px-4">
+      <section className="bg-gray-100 py-10 px-4">
         <div className="max-w-5xl mx-auto">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 text-center">
+            معرض الأعمال والتصاميم
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {galleryImages.map((img, idx) => (
+              <div key={idx} className="relative h-48 md:h-64 rounded-lg overflow-hidden shadow">
+                <Image 
+                  src={img.src} 
+                  alt={img.alt} 
+                  fill 
+                  className="object-cover hover:scale-105 transition duration-300" 
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* الأزرار العائمة */}
+      <a 
+        href="https://wa.me/966569962482" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-12 right-4 z-50 bg-green-600 hover:bg-green-700 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
+        aria-label="Whatsapp"
+      >
+        <MessageCircle className="w-7 h-7" />
+      </a>
+
+      <a 
+        href="tel:0569962482" 
+        className="fixed bottom-12 left-4 z-50 bg-green-600 hover:bg-green-700 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
+        aria-label="Call"
+      >
+        <Phone className="w-7 h-7" />
+      </a>
+
+      {/* الشريط السفلي */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 text-white py-1.5 px-3 text-center shadow-lg border-t border-gray-800">
+        <a 
+          href="tel:0569962482" 
+          className="text-xs md:text-sm font-semibold text-yellow-400 hover:underline inline-flex items-center justify-center gap-2"
+        >
+          <span>اتصل بنا الآن (معاينة واستشارة مجانية):</span>
+          <span className="font-bold tracking-wider" style={{ direction: 'ltr' }}>0569962482</span>
+        </a>
+      </div>
+
+    </main>
+  );
+}
           <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-6 text-center">
             معرض الأعمال والتصاميم
           </h3>
