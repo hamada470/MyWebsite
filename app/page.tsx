@@ -14,7 +14,7 @@ export default function Home() {
     },
     {
       title: 'تفصيل طاولات رخام طعام ومجالس واستقبال حسب الطلب',
-      description: 'نوفر لك ورشة تفصيل طاولات رخام مخصصة بالكامل وفقاً لرغبتك واحتياجات مساحتك. سواء كنت تبحث عن طاولات طعام رخام كبيرة للصالونات، أو طاولات مجالس خدمة صغيرة، أو طاولات قهوة وكاونترات استقبال للمكاتب والشركات، فإننا ننفذها بأعلى درجات الإتقان. يمكنك اختيار شكل القواعد (حديد مدفون، ستانلس ستيل ذهبي أو أسود، أو قواعد رخامية بالكامل)، مع معالجة سطح الرخام بمواد حماية يطالية تمنع امتصاص السوائل والزيوت.'
+      description: 'نوفر لك ورشة تفصيل طاولات رخام مخصصة بالكامل وفقاً لرغبتك واحتياجات مساحتك. سواء كنت تبحث عن طاولات طعام رخام كبيرة للصالونات، أو طاولات مجالس خدمة صغيرة، أو طاولات قهوة وكاونترات استقبال للمكاتب والشركات، فإننا ننفذها بأعلى درجات الإتقان. يمكنك اختيار شكل القواعد (حديد مدفون، ستانلس ستيل ذهبي أو أسود، أو قواعد رخامية بالكامل)، مع معالجة سطح الرخام بمواد حماية إيطالية تمنع امتصاص السوائل والزيوت.'
     },
     {
       title: 'تفصيل وتركيب درج رخام داخلي وخارجي باحترافية',
@@ -56,7 +56,7 @@ export default function Home() {
           تفصيل مغاسل رخام | طاولات | مجالس | تركيب درج رخام بالرياض
         </h1>
         <a 
-          href="tel:0569962402" 
+          href="tel:0569962482" 
           className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-all text-sm md:text-base shrink-0"
         >
           اتصل بنا
@@ -73,10 +73,10 @@ export default function Home() {
             متخصصون في تفصيل مجالس الرخام، تفصيل مغاسل رخام فخمة، تفصيل طاولات رخام، تركيب وتفصيل درج رخام، وتركيب وجلي كافة أنواع الرخام بأعلى جودة بمدينة الرياض.
           </p>
           <a 
-            href="tel:0569962402" 
+            href="tel:0569962482" 
             className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-xl md:text-2xl px-8 py-4 rounded-xl shadow-lg transition-transform hover:scale-105"
           >
-            اتصل الآن للحصول على استشارة ومقاسات مجانية: 0569962402
+            اتصل الآن للحصول على استشارة ومقاسات مجانية: 0569962482
           </a>
         </div>
       </section>
@@ -123,8 +123,8 @@ export default function Home() {
 
       {/* شريط الاتصال الثابت */}
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-gray-900 text-white text-center shadow-2xl z-50 border-t border-yellow-500">
-        <a href="tel:0569962402" className="flex justify-center items-center gap-2 font-bold text-lg md:text-xl text-yellow-400">
-          <span>اتصل بنا الآن (معاينة واستشارة مجانية): 0569962402</span>
+        <a href="tel:0569962482" className="flex justify-center items-center gap-2 font-bold text-lg md:text-xl text-yellow-400">
+          <span>اتصل بنا الآن (معاينة واستشارة مجانية): 0569962482</span>
         </a>
       </div>
 
