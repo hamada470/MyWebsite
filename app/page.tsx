@@ -140,9 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ------------------- الأزرار العائمة والشريط السفلي المعدل ------------------- */}
-
-      {/* زر الواتساب العائم - مثبت تماماً في أقصى اليمين */}
+      {/* الأزرار العائمة والشريط السفلي */}
       <a 
         href="https://wa.me/966569962482" 
         target="_blank" 
@@ -153,7 +151,6 @@ export default function Home() {
         <MessageCircle className="w-7 h-7" />
       </a>
 
-      {/* زر الاتصال العائم - مثبت تماماً في أقصى اليسار */}
       <a 
         href="tel:0569962482" 
         className="fixed bottom-12 left-4 z-50 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
@@ -162,14 +159,13 @@ export default function Home() {
         <Phone className="w-7 h-7" />
       </a>
 
-      {/* الشريط الثابت الملاصف للأسفل - تم تصغير حجمه وارتفاعه (أنحف جداً) */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-gray-900 text-white py-1.5 px-3 text-center shadow-lg border-t border-gray-800">
         <a 
           href="tel:0569962482" 
           className="text-xs md:text-sm font-semibold text-yellow-400 hover:underline inline-flex items-center justify-center gap-2"
         >
           <span>اتصل بنا الآن (معاينة واستشارة مجانية):</span>
-          <span className="font-bold tracking-wider dir-ltr">0569962482</span>
+          <span className="font-bold tracking-wider" style={{ direction: 'ltr' }}>0569962482</span>
         </a>
       </div>
 
