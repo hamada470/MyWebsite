@@ -1,34 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { Phone, MessageCircle } from 'lucide-react';
 
 export default function Home() {
-  const keywords = [
-    'معلم تركيب رخام',
-    'تركيب رخام أرضيات',
-    'تفصيل مغاسل رخام',
-    'تفصيل مغاسل رخام طبيعي',
-    'تفصيل مغاسل رخام صناعي',
-    'تفصيل قونطرات رخام',
-    'تفصيل مشبات رخام',
-    'تفصيل طاولات رخام',
-    'تركيب مغاسل رخام',
-    'تركيب واجهات رخام',
-    'تركيب درج رخام بالرياض',
-    'تفصيل مغاسل مجالس وضيووف',
-    'معلم تركيب رخام ممتاز',
-    'جلي وتلميع رخام',
-    'مطابخ رخام صناعي وطبيعي',
-    'تفصيل شبابيك وإطارات رخام',
-    'صيانة وتعديل الرخام',
-    'معلم تركيب رخام بالرياض'
-  ];
-
   const articles = [
     {
       title: 'تفصيل مغاسل رخام مودرن وفخمة للمجالس والضيوف بالرياض',
-      description: 'نقدم أعلى مستويات الجودة الاحترافية في تفصيل مغاسل رخام طبيعي وصناعي للمجالس والصالات. يتم التصميم عبر فريق من المختصين والفنيين ذوي الخبرة الطويلة في تشكيل وقص الرخام بأحدث التقنيات لضمان الدقة والفخامة التي تليق بديكور منزلك.'
+      description: 'نقدم أعلى مستويات الجودة الاحترافية في تفصيل مغاسل رخام طبيعي وصناعي للمجالس والصالات. يتم التصميم عبر فريق من المختصين والفنيين ذوي الخبرة الطويلة في تشكيل وقص الرخام بأحدث التقنيات لضمان الدقة والفخامة.'
     },
     {
       title: 'تفصيل مغاسل رخام صناعي وطبيعي بأحدث التصاميم',
@@ -69,38 +47,100 @@ export default function Home() {
   ];
 
   const galleryImages = [
-    { src: '/unnamed (1).png', alt: 'تفصيل مغاسل رخام مودرن بالرياض للمجالس والضيوف' },
-    { src: '/unnamed (2).png', alt: 'تفصيل طاولات رخام طعام ومجالس فخمة' },
-    { src: '/unnamed (3).png', alt: 'معلم تركيب رخام أرضيات وجدران بالرياض' },
-    { src: '/unnamed (4).png', alt: 'جلي وتلميع أرضيات ومغاسل الرخام الطبيعي' },
-    { src: '/unnamed (5).png', alt: 'تركيب واجهات رخام ميكانيكي ومباني وفلل' },
+    { src: '/unnamed (1).png', alt: 'تفصيل مغاسل رخام مودرن بالرياض' },
+    { src: '/unnamed (2).png', alt: 'تفصيل طاولات رخام طعام ومجالس' },
+    { src: '/unnamed (3).png', alt: 'معلم تركيب رخام أرضيات وجدران' },
+    { src: '/unnamed (4).png', alt: 'جلي وتلميع أرضيات ومغاسل الرخام' },
+    { src: '/unnamed (5).png', alt: 'تركيب واجهات رخام ميكانيكي' },
     { src: '/unnamed (6).png', alt: 'تفصيل تركيب درج رخام داخلي وخارجي' }
   ];
 
   return (
-    <main className="min-h-screen bg-white text-gray-800 pb-12" style={{ direction: 'rtl', textAlign: 'right' }}>
+    <main className="min-h-screen bg-white text-gray-800 pb-20" style={{ direction: 'rtl', textAlign: 'right' }}>
       
       {/* الهيدر العلوي */}
       <header className="bg-gray-900 text-white py-3 px-4 flex justify-between items-center sticky top-0 z-40 shadow-md">
-        <h1 className="text-base md:text-xl font-bold text-yellow-400">
+        <h1 className="text-sm md:text-xl font-bold text-yellow-400">
           تفصيل مغاسل رخام | طاولات | مجالس | تركيب درج رخام بالرياض
         </h1>
         <a 
           href="tel:0569962482" 
-          className="bg-yellow-400 hover:bg-yellow-500 text-black px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 text-sm"
+          className="bg-yellow-400 hover:bg-yellow-500 text-black px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 text-xs md:text-sm"
         >
-          <Phone className="w-4 h-4" />
           اتصل بنا
         </a>
       </header>
 
-      {/* القسم الرئيسي / البنر */}
-      <section className="bg-gray-800 text-white py-12 px-4 text-center">
-        <div className="max-w-4xl mx-auto space-y-4">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-yellow-400">
+      {/* القسم الرئيسي */}
+      <section className="bg-gray-800 text-white py-10 px-4 text-center">
+        <div className="max-w-4xl mx-auto space-y-3">
+          <h2 className="text-xl md:text-3xl font-extrabold text-yellow-400">
             أفضل معلم تركيب وتفصيل رخام بالرياض
           </h2>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+            نقدم خدمات تفصيل مغاسل رخام طبيعي وصناعي، تفصيل طاولات رخام، تفصيل قونطرات، تفصيل مشبات، وشبابيك وإطارات الرخام، بالإضافة إلى تركيب أرضيات ودرج وواجهات الرخام وصيانة وتعديل القطع القديمة وتغيير الأحواض التالفة.
+          </p>
+        </div>
+      </section>
+
+      {/* الأوصاف والخدمات */}
+      <section className="max-w-5xl mx-auto py-8 px-4">
+        <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-6 text-center">
+          دليل خدماتنا التفصيلية لمشاريع الرخام بالرياض
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {articles.map((item, index) => (
+            <div key={index} className="bg-gray-50 border border-gray-200 p-4 rounded-lg shadow-sm">
+              <h4 className="text-base font-bold text-yellow-600 mb-1">{item.title}</h4>
+              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* معرض الصور */}
+      <section className="bg-gray-100 py-8 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-6 text-center">
+            معرض الأعمال والتصاميم
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {galleryImages.map((img, idx) => (
+              <div key={idx} className="relative h-40 md:h-56 rounded-lg overflow-hidden shadow">
+                <Image src={img.src} alt={img.alt} fill className="object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* زر الواتساب العائم - في أقصى اليمين أسفل الشاشة */}
+      <a 
+        href="https://wa.me/966569962482" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-5 right-5 z-50 bg-green-600 hover:bg-green-700 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
+        aria-label="Whatsapp"
+      >
+        <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+        </svg>
+      </a>
+
+      {/* زر الاتصال العائم - في أقصى اليسار أسفل الشاشة */}
+      <a 
+        href="tel:0569962482" 
+        className="fixed bottom-5 left-5 z-50 bg-green-600 hover:bg-green-700 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
+        aria-label="Call"
+      >
+        <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </a>
+
+    </main>
+  );
+}
             مهما كانت فكرتك أو التصميم الذي ترغب في تطبيقه من الرخام، فإن ورشتنا بالرياض مستعدة لتحويله لواقع. نقدم خدمات تفصيل مغاسل رخام طبيعي وصناعي، تفصيل طاولات رخام، تفصيل قونطرات، تفصيل مشبات، وشبابيك وإطارات الرخام، بالإضافة إلى تركيب أرضيات ودرج وواجهات الرخام وصيانة وتعديل القطع القديمة وتغيير الأحواض التالفة. نلتزم دائماً بالسرعة في التنفيذ، دقة المواعيد، وتقديم أسعار تنافسية تناسب كافة ميزانيات مشاريعكم.
           </p>
         </div>
