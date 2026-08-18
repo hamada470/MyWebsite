@@ -26,7 +26,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  // الكلمات المفتاحية موزعة باحترافية داخل الخدمات
   const articles = [
     { 
       title: 'تفصيل مغاسل رخام مودرن وفخمة للمجالس والضيوف بالرياض', 
@@ -79,7 +78,7 @@ export default function Home() {
     '/unnamed (6).png'
   ];
 
-  // بيانات Schema Markup لإجبار Google على إدراك النشاط بالرياض بدون خريطة
+  // بيانات Schema Markup
   const jsonLdData = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -103,7 +102,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800 pb-24 md:pb-16" style={{ direction: 'rtl', textAlign: 'right' }}>
       
-      {/* 2. إضافة كود البيانات المنظمة (JSON-LD Schema) */}
+      {/* البيانات المنظمة Schema Markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
@@ -116,7 +115,6 @@ export default function Home() {
             تفصيل مغاسل رخام | طاولات | مجالس | تركيب درج رخام بالرياض
           </span>
           
-          {/* زر الواتساب أعلى الشاشة (لأجهزة الكمبيوتر) */}
           <a 
             href="https://wa.me/966569962482" 
             target="_blank"
@@ -132,7 +130,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* قسم المقدمة - مع وسم H1 الرئيسي للسيو */}
+      {/* قسم المقدمة */}
       <section className="bg-gray-800 text-white py-12 px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-4">
           <h1 className="text-2xl md:text-4xl font-extrabold text-yellow-400 leading-tight">
@@ -144,7 +142,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* قسم المقالات مع الصور وأزرار الاتصال */}
+      {/* قسم الخدمات والمقالات */}
       <section className="max-w-5xl mx-auto py-10 px-4">
         <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
           خدماتنا المتميزة في تفصيل وتركيب الرخام بالرياض
@@ -154,13 +152,11 @@ export default function Home() {
           {articles.map((item, index) => (
             <div key={index} className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition flex flex-col justify-between">
               
-              {/* النص والأوصاف */}
               <div className="p-5">
                 <h3 className="text-lg font-bold text-yellow-600 mb-2 leading-snug">{item.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
               </div>
 
-              {/* الصورة وزر الاتصال فوق الصورة */}
               <div className="relative h-52 w-full mt-2">
                 <Image 
                   src={galleryImages[index % galleryImages.length]} 
@@ -170,7 +166,6 @@ export default function Home() {
                   className="object-cover"
                 />
                 
-                {/* زر اتصال عائم يظهر أسفل كل صورة */}
                 <a 
                   href="tel:0569962482" 
                   className="absolute bottom-3 left-3 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl shadow-md flex items-center gap-2 font-bold text-sm transition transform hover:scale-105"
@@ -187,7 +182,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. شريط أزرار الاتصال الثابت السريع للجوال (Call to Action Bar) */}
+      {/* شريط الاتصال السريع للجوال */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 p-3 flex justify-around items-center md:hidden shadow-2xl">
         <a 
           href="tel:0569962482" 
