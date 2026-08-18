@@ -162,14 +162,6 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
-                
-                <a 
-                  href="tel:0569962482" 
-                  className="absolute bottom-3 left-3 bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl shadow-md flex items-center gap-2 font-bold text-sm transition transform hover:scale-105"
-                >
-                  <span>📞</span>
-                  <span>اتصل الآن</span>
-                </a>
               </div>
 
             </div>
