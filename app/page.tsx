@@ -1,58 +1,35 @@
-import { Metadata } from 'next';
-import Script from 'next/script';
-
-export const metadata: Metadata = {
-  title: 'تفصيل مغاسل رخام بالرياض | 0569962482',
-  description: 'أفضل ورشة تفصيل مغاسل رخام وطاولات بالرياض.',
-};
+import React from 'react';
 
 export default function Home() {
-  const articles = [
-    { title: 'تفصيل مغاسل رخام مودرن', description: 'تصاميم عصرية للمغاسل بجودة عالية.' },
-    { title: 'تفصيل طاولات رخام', description: 'طاولات رخام فاخرة ومخصصة بالكامل.' },
-    { title: 'تركيب رخام الواجهات', description: 'تركيب احترافي للواجهات والأعمدة.' },
-    { title: 'تركيب أرضيات رخام', description: 'تركيب أرضيات بدقة عالية ومنسوب ممتاز.' }
-  ];
-
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-800" dir="rtl">
+    <main style={{ minHeight: '100vh', backgroundColor: '#f9fafb', direction: 'rtl', textAlign: 'center' }}>
       
-      {/* شريط الاتصال العلوي */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-slate-900 py-3 px-4 shadow-md flex justify-between items-center">
-        <span className="text-white font-bold">ورشة رخام الرياض</span>
-        <a href="tel:0569962482" className="bg-emerald-600 text-white font-bold py-2 px-6 rounded-full">اتصل الآن</a>
+      {/* Top Bar */}
+      <div style={{ padding: '20px', backgroundColor: '#0f172a', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <span>ورشة رخام الرياض</span>
+        <a href="tel:0569962482" style={{ backgroundColor: '#059669', color: '#fff', padding: '10px 20px', borderRadius: '20px', textDecoration: 'none', fontWeight: 'bold' }}>اتصل الآن</a>
       </div>
 
-      {/* زر الواتساب المهتز */}
-      <a href="https://wa.me/966569962482" target="_blank" rel="noopener noreferrer" 
-         className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-5 rounded-full shadow-2xl"
-         style={{ animation: 'shake 0.3s infinite alternate' }}>
-        <svg className="w-10 h-10 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.219 0-5.859 2.641-5.859 5.859 0 1.031.281 2.016.797 2.859l-1.078 3.938 4.047-1.078c.844.469 1.828.719 2.859.719 3.219 0 5.859-2.641 5.859-5.859s-2.641-5.859-5.859-5.859zm0 0"/></svg>
-      </a>
-
-      <style jsx global>{`
-        @keyframes shake {
-          0% { transform: rotate(0deg) scale(1); }
-          100% { transform: rotate(10deg) scale(1.1); }
-        }
-      `}</style>
-
-      {/* المحتوى */}
-      <section className="pt-28 pb-16 px-4 text-center">
-        <h1 className="text-3xl font-bold mb-4">تفصيل مغاسل رخام بالرياض</h1>
-        <p className="text-lg text-gray-600">أفضل ورشة متخصصة في تفصيل المغاسل وطاولات الرخام.</p>
+      {/* Main Content */}
+      <section style={{ padding: '50px 20px' }}>
+        <h1 style={{ fontSize: '32px', marginBottom: '20px' }}>تفصيل مغاسل رخام وطاولات</h1>
+        <p style={{ fontSize: '18px', color: '#4b5563' }}>أفضل الخدمات في الرياض</p>
       </section>
 
-      <section className="px-4 pb-12 max-w-4xl mx-auto">
-        <div className="grid gap-6">
-          {articles.map((item, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow">
-              <h2 className="text-2xl font-bold mb-2">{item.title}</h2>
-              <p className="text-xl text-gray-600">{item.description}</p>
-            </div>
-          ))}
+      {/* Services List */}
+      <section style={{ padding: '0 20px', maxWidth: '600px', margin: '0 auto' }}>
+        <div style={{ backgroundColor: '#fff', padding: '20px', marginBottom: '15px', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+          <h2 style={{ fontSize: '20px' }}>تفصيل مغاسل رخام</h2>
+        </div>
+        <div style={{ backgroundColor: '#fff', padding: '20px', marginBottom: '15px', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
+          <h2 style={{ fontSize: '20px' }}>تفصيل طاولات رخام</h2>
         </div>
       </section>
+
+      {/* Floating WhatsApp Button */}
+      <a href="https://wa.me/966569962482" style={{ position: 'fixed', bottom: '30px', right: '30px', backgroundColor: '#25D366', color: '#fff', padding: '20px', borderRadius: '50%', boxShadow: '0 4px 10px rgba(0,0,0,0.3)', textDecoration: 'none', fontSize: '16px', fontWeight: 'bold' }}>
+        واتساب
+      </a>
     </main>
   );
 }
