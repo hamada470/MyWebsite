@@ -116,15 +116,13 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-800 dir-rtl">
-      {/* Schema.org Script */}
+    <main className="min-h-screen bg-gray-50 text-gray-800">
       <Script
         id="schema-org"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
       />
 
-      {/* Google Ads Global Site Tag (gtag.js) - استبدل AW-YOUR_ID برقمك */}
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=AW-YOUR_ID"
@@ -138,13 +136,11 @@ export default function Home() {
         `}
       </Script>
 
-      {/* زر الواتساب المهتز الكبير مع تتبع النقرات */}
       <a
         href="https://wa.me/966569962482"
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => {
-          // كود تتبع إحالة جوجل (استبدل القيم حسب إعدادات حسابك)
           if (typeof window !== 'undefined' && (window as any).gtag) {
             (window as any).gtag('event', 'conversion', {
               'send_to': 'AW-YOUR_ID/YOUR_LABEL'
@@ -166,7 +162,6 @@ export default function Home() {
         `}</style>
       </a>
 
-      {/* Header Section */}
       <section className="bg-slate-900 text-white py-16 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">تفصيل مغاسل رخام بالرياض وطاولات مودرن</h1>
@@ -189,7 +184,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Articles / Services Section */}
       <section className="py-12 px-4 max-w-6xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-slate-800">خدماتنا وتخصصاتنا بالرياض</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -204,7 +198,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section with Error Handling */}
       <section className="py-12 px-4 max-w-7xl mx-auto bg-gray-100 rounded-3xl my-8">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-slate-800">معرض أعمالنا ورشة الرخام</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -225,7 +218,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-slate-900 text-white py-8 px-4 text-center mt-12">
         <p className="text-gray-400">جميع الحقوق محفوظة © 2026 - تفصيل مغاسل رخام بالرياض</p>
       </footer>
