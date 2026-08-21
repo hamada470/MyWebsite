@@ -1,9 +1,50 @@
-import React from 'react';
+import { Metadata } from 'next';
+import Script from 'next/script';
+
+export const metadata: Metadata = {
+  title: 'تفصيل مغاسل رخام بالرياض | أسعار خاصة وتصاميم حديثة 0569962482',
+  description: 'أفضل ورشة تفصيل مغاسل رخام بالرياض. متخصصون في الرخام الطبيعي والصناعي، طاولات رخام، تركيب واجهات، أرضيات، وجلي رخام. جودة عالية وسرعة في التنفيذ. اتصل بنا: 0569962482',
+  keywords: [
+    'تفصيل مغاسل رخام بالرياض',
+    'مغاسل رخام تفصيل',
+    'أسعار مغاسل الرخام في الرياض',
+    'معلم تركيب رخام بالرياض'
+  ],
+  openGraph: {
+    title: 'تفصيل مغاسل رخام بالرياض | معلم تركيب رخام وطاولات مودرن',
+    description: 'تفصيل وتصنيع كافة ديكورات الرخام والمغاسل وطاولات الرخام بالرياض بجودة عالية وأسعار تنافسية.',
+    locale: 'ar_SA',
+    type: 'website',
+  },
+};
 
 export default function Home() {
+  const jsonLdData = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "ورشة تفصيل مغاسل رخام وطاولات وتركيب أرضيات بالرياض",
+    "description": "تفصيل مغاسل رخام طبيعي وصناعي، تفصيل طاولات رخام، تركيب رخام، وتركيب أرضيات رخام بالرياض.",
+    "telephone": "+966569962482",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "الرياض",
+      "addressRegion": "منطقة الرياض",
+      "addressCountry": "SA"
+    },
+    "areaServed": "الرياض",
+    "priceRange": "$$"
+  };
+
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f9fafb', direction: 'rtl', paddingBottom: '80px', fontFamily: 'sans-serif' }}>
       
+      {/* سكربت التتبع والـ Schema */}
+      <Script
+        id="schema-org"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+      />
+
       {/* شريط الاتصال العلوي الثابت */}
       <div style={{ position: 'sticky', top: 0, zIndex: 100, padding: '15px 20px', backgroundColor: '#0f172a', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
         <span style={{ fontWeight: 'bold', fontSize: '16px' }}>ورشة رخام الرياض</span>
@@ -15,40 +56,52 @@ export default function Home() {
       {/* العنوان الرئيسي */}
       <section style={{ padding: '40px 20px', textAlign: 'center' }}>
         <h1 style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '10px', color: '#1e293b' }}>تفصيل مغاسل رخام بالرياض وطاولات مودرن</h1>
-        <p style={{ fontSize: '16px', color: '#4b5563' }}>جودة عالية وسرعة في التنفيذ لجميع أعمال الرخام الطبيعي والصناعي</p>
+        <p style={{ fontSize: '16px', color: '#4b5563' }}>جودة عالية وسرعة في التنفيذ لجميع أعمال الرخام الطبيعي والصناعي بمدينة الرياض</p>
       </section>
 
-      {/* الـ 6 أقسام للخدمات */}
+      {/* الـ 6 أقسام بأوصاف مفصلة وكبيرة */}
       <section style={{ padding: '0 20px', maxWidth: '800px', margin: '0 auto', display: 'grid', gap: '20px' }}>
         
         <div style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '15px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', border: '1px solid #e5e7eb' }}>
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>1. تفصيل مغاسل رخام مودرن</h2>
-          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.6' }}>تصاميم عصرية وفخمة للمغاسل المعلقة والمجالس والضيوف بأرقى أنواع الرخام.</p>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>1. تفصيل مغاسل رخام مودرن وفخمة للمجالس والضيوف</h2>
+          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.8' }}>
+            نقدم أعلى مستويات الجودة والاحترافية في تفصيل مغاسل رخام طبيعي وصناعي مخصصة للمجالس والصالات والفلل بمدينة الرياض. نحرص تماماً على تقديم تصاميم عصرية ومبتكرة تتناسب مع أرقى الديكورات الحديثة، مع دمج تقنيات الحفر الليزري وإضاءات الليد المخفية لإبراز جمال عروق الرخام الطبيعي. نلبي كافة تطلعات العملاء ونوفر تصاميم معلقة وواقفة بتشكيلات هندسية فريدة تمنح منزلك لمسة فخامة لا تُضاهى وتدوم طويلاً بكفاءة عالية ومقاومة تامة للمياه والرطوبة.
+          </p>
         </div>
 
         <div style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '15px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', border: '1px solid #e5e7eb' }}>
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>2. تفصيل طاولات رخام</h2>
-          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.6' }}>طاولات طعام، طاولات خدمة ومجالس مصممة خصيصاً حسب المقاسات والطلب.</p>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>2. قسم تفصيل طاولات رخام طعام ومجالس واستقبال</h2>
+          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.8' }}>
+            متخصصون باحترافية كاملة في تفصيل طاولات رخام فاخرة ومصممة خصيصاً وفقاً للمقاسات والمواصفات الدقيقة التي يطلبها العميل. نوفر أرقى الأسطح الرخامية الطبيعية المستوردة والمحلية، بالإضافة إلى الرخام الصناعي المعالج، مع قواعد من الحديد المذهب الفاخر أو الستانلس ستيل المقاوم للصدأ أو القواعد الرخامية المتكاملة. تناسب طاولاتنا غرف الطعام، طاولات الصالونات، ومجالس الاستقبال لتضفي طابعاً من الرقي والفخامة على منزلك الراقي بأسعار تنافسية وممتازة.
+          </p>
         </div>
 
         <div style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '15px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', border: '1px solid #e5e7eb' }}>
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>3. تركيب رخام الواجهات</h2>
-          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.6' }}>تنفيذ وتركيب واجهات الفلل والمباني بأعلى معايير الأمان والتثبيت الميكانيكي.</p>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>3. قسم تركيب رخام الواجهات والمداخل الخارجية</h2>
+          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.8' }}>
+            نمتلك فريقاً هندسياً وفنياً محترفاً ومتكاملاً لتقديم خدمات تركيب رخام الواجهات والأعمدة والمداخل والجدران الخارجية للمباني والفلل والقصور بالرياض. نعتمد بشكل أساسي على أفضل وأحدث طرق التثبيت الميكانيكي والعادي لضمان الأمان التام والثبات طويل الأمد. كما نولي اهتماماً بالغاً بفرز العروق وتناسق الرسمات الهندسية للرخام لإعطاء واجهة منزلك مظهراً مهيباً وخلاباً يعكس الذوق الرفيع ويتحمل كافة قسوة العوامل الجوية المختلفة على مدار العام.
+          </p>
         </div>
 
         <div style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '15px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', border: '1px solid #e5e7eb' }}>
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>4. تركيب أرضيات رخام</h2>
-          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.6' }}>تركيب أرضيات القصور والفلل بدقة متناهية، مع ضبط المنسوب وتلميع الفواصل.</p>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>4. قسم تركيب أرضيات رخام للمنازل والقصور</h2>
+          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.8' }}>
+            نوفر أحدث تقنيات وأساليب تركيب أرضيات رخام طبيعي وصناعي بالرياض مع مراعاة دقة المنسوب والميول الهندسية المطلوبة بدقة متناهية. نطبق نظام القص والتطبيق باستخدام أحدث ماكينات الليزر والقص لضمان أفضل مظهر متناسق وجذاب للأرضيات. يهتم فريقنا بمعالجة الفواصل وتعبئتها بمواد خاصة متطابقة مع لون الرخام، ومن ثم تلميعها لتظهر الأرضية كقطعة واحدة متصلة ومنسجمة تزيد من اتساع المكان وفخامته المطلقة.
+          </p>
         </div>
 
         <div style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '15px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', border: '1px solid #e5e7eb' }}>
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>5. تفصيل درج رخام</h2>
-          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.6' }}>قص وتشكيل وتركيب الدرج الداخلي والخارجي بتناسق تام للعروق والشكل الجمالي.</p>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>5. قسم تفصيل وتصميم درج رخام داخلي وخارجي</h2>
+          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.8' }}>
+            نقدم خدمات متكاملة في قص وتشحيم وتركيب درج الرخام الداخلي للفلل والقصور والدرج الخارجي للمداخل والمباني التجاريّة. نستخدم أجود أنواع الرخام الصلب المقاوم للاحتكاك والاستخدام المكثف، مع تنفيذ حواف دائرية أو مربعة حسب رغبة العميل. نضمن لكم تركيباً مستقراً وآمناً مع تنسيق دقيق لاتجاه عروق الرخام على القوائم والنائم ليظهر الدرج بتحفة فنية معمارية متكاملة تسر الناظرين وتتحمل الاستخدام الشاق لسنين طويلة.
+          </p>
         </div>
 
         <div style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '15px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', border: '1px solid #e5e7eb' }}>
-          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>6. جلي وتلميع الرخام</h2>
-          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.6' }}>إعادة البريق واللمعان للرخام القديم وإزالة الخدوش باستخدام أحدث التقنيات.</p>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>6. قسم جلي وتلميع وصيانة الرخام القديم</h2>
+          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.8' }}>
+            نقدم خدمة إعادة البريق واللمعان للرخام القديم والمطفأ وإزالة الخدوش والبقع المستعصية باستخدام أحدث أجهزة الجلي بالألماس والكريستال بمدينة الرياض. نقوم بمعالجة الفراغات والكسور بمادة الجلص الملون المطابق للرخام تماماً، ثم صقله وتلميعه ليشع بالنظافة ويعود كأنه تم تركيبه حديثاً. هذه الخدمة تضمن الحفاظ على الاستثمار الخاص بديكورات الرخام بمنزلك وتطيل من عمره الافتراضي بشكل ملحوظ وبنتائج مذهلة ترضي كافة عملائنا الكرام.
+          </p>
         </div>
 
       </section>
