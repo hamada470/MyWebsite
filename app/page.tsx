@@ -3,17 +3,16 @@ import Image from 'next/image';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'تفصيل مغاسل رخام بالرياض | أسعار خاصة وتصاميم حديثة 0569962482',
-  description: 'أفضل ورشة تفصيل مغاسل رخام بالرياض. متخصصون في الرخام الطبيعي والصناعي، طاولات رخام، تركيب واجهات، أرضيات، وجلي رخام. جودة عالية وسرعة في التنفيذ. اتصل بنا: 0569962482',
+  title: 'Marble Washbasins Riyadh | 0569962482',
+  description: 'Best marble workshop in Riyadh for custom marble washbasins, tables, flooring, and polishing. High quality and fast execution. Call us: 0569962482',
   keywords: [
-    'تفصيل مغاسل رخام بالرياض',
-    'مغاسل رخام تفصيل',
-    'أسعار مغاسل الرخام في الرياض',
-    'معلم تركيب رخام بالرياض'
+    'marble washbasins riyadh',
+    'custom marble',
+    'marble tables riyadh'
   ],
   openGraph: {
-    title: 'تفصيل مغاسل رخام بالرياض | معلم تركيب رخام وطاولات مودرن',
-    description: 'تفصيل وتصنيع كافة ديكورات الرخام والمغاسل وطاولات الرخام بالرياض بجودة عالية وأسعار تنافسية.',
+    title: 'Marble Washbasins Riyadh | Custom Design',
+    description: 'Custom marble work and washbasins in Riyadh with high quality.',
     locale: 'ar_SA',
     type: 'website',
   },
@@ -22,20 +21,20 @@ export const metadata: Metadata = {
 export default function Home() {
   const articles = [
     { 
-      title: 'تفصيل مغاسل رخام مودرن وفخمة للمجالس والضيوف بالرياض', 
-      description: 'نقدم أعلى مستويات الجودة والاحترافية في تفصيل مغاسل رخام طبيعي وصناعي مخصصة للمجالس والصالات بمدينة الرياض. نحرص على تقديم تصاميم عصرية تتناسب مع أرقى الديكورات مع دمج الحفر الليزري والإضاءات المخفية لتلبية تطلعات العملاء وتوفير لمسة فخامة فريدة تدوم طويلاً.' 
+      title: 'تفصيل مغاسل رخام مودرن بالرياض', 
+      description: 'نقدم أعلى مستويات الجودة والاحترافية في تفصيل مغاسل رخام طبيعي وصناعي مخصصة للمجالس والصالات بمدينة الرياض بجودة عالية.' 
     },
     { 
-      title: 'قسم تفصيل طاولات رخام طعام ومجالس واستقبال بالرياض', 
-      description: 'متخصصون في تفصيل طاولات رخام فاخرة ومخصصة بالكامل وفق المقاسات والمواصفات المطلوبة. نوفر أرقى الأسطح الرخامية الطبيعية والصناعية مع قواعد حديد مذهب أو ستانلس ستيل أو قواعد رخامية بالكامل لتناسب منزلك الراقي.' 
+      title: 'قسم تفصيل طاولات رخام بالرياض', 
+      description: 'متخصصون في تفصيل طاولات رخام فاخرة ومخصصة بالكامل وفق المقاسات والمواصفات المطلوبة لتناسب منزلك الراقي.' 
     },
     { 
-      title: 'قسم تركيب رخام بأعلى المعايير الهندسيّة بالرياض', 
-      description: 'نمتلك فريقاً احترافياً متكاملاً لخدمات تركيب رخام الواجهات والأعمدة والمداخل والجدران للمباني والفلل والقصور. نعتمد أفضل طرق التثبيت الميكانيكي والعادي للضمان والأمان التام، مع الاهتمام بفرز العروق وتناسق الرسمات.' 
+      title: 'قسم تركيب رخام الواجهات بالرياض', 
+      description: 'نمتلك فريقاً احترافياً متكاملاً لخدمات تركيب رخام الواجهات والأعمدة والمداخل والجدران للمباني والفلل.' 
     },
     { 
-      title: 'قسم تركيب أرضيات رخام للمنازل والقصور بالرياض', 
-      description: 'نوفر أحدث تقنيات تركيب أرضيات رخام طبيعي والصناعي بالرياض مع مراعاة دقة المنسوب والميول وتطبيق نظام القص والتطبيق بالماكينات الحديثة لضمان أفضل مظهر هندسي متناسق وجذاب.' 
+      title: 'قسم تركيب أرضيات رخام بالرياض', 
+      description: 'نوفر أحدث تقنيات تركيب أرضيات رخام طبيعي وصناعي بالرياض مع مراعاة دقة المنسوب والميول.' 
     }
   ];
 
@@ -46,30 +45,8 @@ export default function Home() {
     '/vercel.svg'
   ];
 
-  const jsonLdData = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "ورشة تفصيل مغاسل رخام وطاولات وتركيب أرضيات بالرياض",
-    "description": "تفصيل مغاسل رخام طبيعي وصناعي، تفصيل طاولات رخام، تركيب رخام، وتركيب أرضيات رخام بالرياض.",
-    "telephone": "+966569962482",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "الرياض",
-      "addressRegion": "منطقة الرياض",
-      "addressCountry": "SA"
-    },
-    "areaServed": "الرياض",
-    "priceRange": "$$"
-  };
-
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800" dir="rtl">
-      <Script
-        id="schema-org"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
-      />
-
       {/* شريط عائم ثابت أعلى الشاشة لزر الاتصال */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 py-3 px-4 shadow-md flex justify-between items-center">
         <span className="text-white font-bold text-sm md:text-base">ورشة رخام الرياض</span>
