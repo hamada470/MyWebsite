@@ -104,6 +104,32 @@ export default function Home() {
           </p>
         </div>
 
+        {/* قسم الخريطة التفاعلية */}
+        <div style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '15px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', border: '1px solid #e5e7eb' }}>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>📍 موقعنا على الخريطة</h2>
+          <p style={{ fontSize: '15px', color: '#4b5563', lineHeight: '1.8', marginBottom: '15px' }}>
+            تفضل بزيارتنا أو تواصل معنا لمعاينة أحدث تصاميم وعينات الرخام بمدينة الرياض:
+          </p>
+          <div style={{ width: '100%', height: '300px', borderRadius: '10px', overflow: 'hidden', border: '2px solid #e5e7eb' }}>
+            <iframe 
+              src="https://maps.google.com/maps?q=24.7136,46.6753&hl=ar&z=14&output=embed" 
+              style={{ width: '100%', height: '100%', border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div style={{ marginTop: '15px', textAlign: 'center' }}>
+            <a 
+              href="https://maps.app.goo.gl/snPp4ESnECJ6MnGMA" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ display: 'inline-block', backgroundColor: '#2563eb', color: '#fff', padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}
+            >
+              📍 فتح الموقع في خرائط جوجل
+            </a>
+          </div>
+        </div>
+
       </section>
 
       {/* زر الواتساب الدائري المهتز على شكل التطبيق */}
