@@ -1,22 +1,7 @@
+'use client';
+
 import type { Metadata } from 'next';
 import Script from 'next/script';
-
-export const metadata: Metadata = {
-  title: 'تفصيل مغاسل رخام بالرياض | أسعار خاصة وتصاميم حديثة 0569962482',
-  description: 'أفضل ورشة تفصيل مغاسل رخام بالرياض. متخصصون في الرخام الطبيعي والصناعي، طاولات رخام، تركيب واجهات، أرضيات، وجلي رخام. جودة عالية وسرعة في التنفيذ. اتصل بنا: 0569962482',
-  keywords: [
-    'تفصيل مغاسل رخام بالرياض',
-    'مغاسل رخام تفصيل',
-    'أسعار مغاسل الرخام في الرياض',
-    'معلم تركيب رخام بالرياض'
-  ],
-  openGraph: {
-    title: 'تفصيل مغاسل رخام بالرياض | معلم تركيب رخام وطاولات مودرن',
-    description: 'تفصيل وتصنيع كافة ديكورات الرخام والمغاسل وطاولات الرخام بالرياض بجودة عالية وأسعار تنافسية.',
-    locale: 'ar_SA',
-    type: 'website',
-  },
-};
 
 export default function Home() {
   const jsonLdData = {
@@ -33,6 +18,15 @@ export default function Home() {
     },
     "areaServed": "الرياض",
     "priceRange": "$$"
+  };
+
+  // دالة إرسال حدث التحويل عند النقر على أي زر اتصال
+  const handleCallConversion = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18411521630', // تم ربطه بمعرف حسابك
+      });
+    }
   };
 
   return (
@@ -62,13 +56,13 @@ export default function Home() {
 
       {/* البنر العلوي الأصفر */}
       <div style={{ backgroundColor: '#eab308', color: '#0f172a', padding: '10px 15px', textAlign: 'center', fontWeight: 'bold', fontSize: '14px' }}>
-        ⚡ عروض خاصة على تفصيل المغاسل والطاولات لفترة محدودة | للتواصل المباشر: <a href="tel:0569962482" style={{ color: '#0f172a', textDecoration: 'underline' }}>0569962482</a>
+        ⚡ عروض خاصة على تفصيل المغاسل والطاولات لفترة محدودة | للتواصل المباشر: <a href="tel:0569962482" onClick={handleCallConversion} style={{ color: '#0f172a', textDecoration: 'underline' }}>0569962482</a>
       </div>
 
       {/* الهيدر الرئيسي */}
       <header style={{ position: 'sticky', top: 0, zIndex: 100, padding: '14px 20px', backgroundColor: '#0f172a', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 10px rgba(0,0,0,0.15)' }}>
         <span style={{ fontWeight: 'bold', fontSize: '18px', color: '#ffffff' }}>ورشة رخام الرياض</span>
-        <a href="tel:0569962482" style={{ backgroundColor: '#eab308', color: '#0f172a', padding: '8px 18px', borderRadius: '20px', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>
+        <a href="tel:0569962482" onClick={handleCallConversion} style={{ backgroundColor: '#eab308', color: '#0f172a', padding: '8px 18px', borderRadius: '20px', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>
           📞 اتصل الآن
         </a>
       </header>
@@ -79,7 +73,7 @@ export default function Home() {
         <p style={{ fontSize: '15px', color: '#334155', maxWidth: '600px', margin: '0 auto', lineHeight: '1.6' }}>جودة عالية وسرعة في التنفيذ لجميع أعمال الرخام الطبيعي والصناعي بمدينة الرياض</p>
       </section>
 
-      {/* الأقسام الخمسة مع الأزرار الصفراء وبدون صور */}
+      {/* الأقسام الخمسة مع تتبع النقرات */}
       <section style={{ padding: '20px', maxWidth: '800px', margin: '0 auto', display: 'grid', gap: '24px' }}>
         
         {/* القسم الأول */}
@@ -88,7 +82,7 @@ export default function Home() {
           <p style={{ fontSize: '14px', color: '#334155', lineHeight: '1.8', marginBottom: '18px' }}>
             نقدم أعلى مستويات الجودة والاحترافية في تفصيل مغاسل رخام طبيعي وصناعي مخصصة للمجالس والصالات والفلل بمدينة الرياض. نحرص تماماً على تقديم تصاميم عصرية ومبتكرة تتناسب مع أرقى الديكورات الحديثة، مع دمج تقنيات الحفر الليزري وإضاءات الليد المخفية لإبراز جمال عروق الرخام الطبيعي. نلبي كافة تطلعات العملاء ونوفر تصاميم معلقة وواقفة بتشكيلات هندسية فريدة.
           </p>
-          <a href="tel:0569962482" style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
+          <a href="tel:0569962482" onClick={handleCallConversion} style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
             📞 طلب تفصيل مغسلة رخام - اتصل الآن
           </a>
         </article>
@@ -99,7 +93,7 @@ export default function Home() {
           <p style={{ fontSize: '14px', color: '#334155', lineHeight: '1.8', marginBottom: '18px' }}>
             متخصصون باحترافية كاملة في تفصيل طاولات رخام فاخرة ومصممة خصيصاً وفقاً للمقاسات والمواصفات الدقيقة التي يطلبها العميل. نوفر أرقى الأسطح الرخامية الطبيعية المستوردة والمحلية، بالإضافة إلى الرخام الصناعي المعالج، مع قواعد من الحديد المذهب الفاخر أو الستانلس ستيل المقاوم للصدأ أو القواعد الرخامية المتكاملة.
           </p>
-          <a href="tel:0569962482" style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
+          <a href="tel:0569962482" onClick={handleCallConversion} style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
             📞 طلب تفصيل طاولة رخام - اتصل الآن
           </a>
         </article>
@@ -110,7 +104,7 @@ export default function Home() {
           <p style={{ fontSize: '14px', color: '#334155', lineHeight: '1.8', marginBottom: '18px' }}>
             نمتلك فريقاً هندسياً وفنياً محترفاً ومتكاملاً لتقديم خدمات تركيب رخام الواجهات والأعمدة والمداخل والجدران الخارجية للمباني والفلل والقصور بالرياض. نعتمد بشكل أساسي على أفضل وأحدث طرق التثبيت الميكانيكي والعادي لضمان الأمان التام والثبات طويل الأمد.
           </p>
-          <a href="tel:0569962482" style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
+          <a href="tel:0569962482" onClick={handleCallConversion} style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
             📞 حجز معلم تركيب واجهات - اتصل الآن
           </a>
         </article>
@@ -121,7 +115,7 @@ export default function Home() {
           <p style={{ fontSize: '14px', color: '#334155', lineHeight: '1.8', marginBottom: '18px' }}>
             نوفر أحدث تقنيات وأساليب تركيب أرضيات رخام طبيعي وصناعي بالرياض مع مراعاة دقة المنسوب والميول الهندسية المطلوبة بدقة متناهية. نطبق نظام القص والتطبيق باستخدام أحدث ماكينات الليزر والقص لضمان أفضل مظهر متناسق وجذاب للأرضيات.
           </p>
-          <a href="tel:0569962482" style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
+          <a href="tel:0569962482" onClick={handleCallConversion} style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
             📞 استفسر عن أسعار تركيب الأرضيات
           </a>
         </article>
@@ -132,7 +126,7 @@ export default function Home() {
           <p style={{ fontSize: '14px', color: '#334155', lineHeight: '1.8', marginBottom: '18px' }}>
             نقدم خدمات متكاملة في قص وتشحيم وتركيب درج الرخام الداخلي للفلل والقصور والدرج الخارجي للمداخل والمباني التجاريّة. نستخدم أجود أنواع الرخام الصلب المقاوم للاحتكاك والاستخدام المكثف، مع تنفيذ حواف دائرية أو مربعة حسب رغبة العميل.
           </p>
-          <a href="tel:0569962482" style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
+          <a href="tel:0569962482" onClick={handleCallConversion} style={{ display: 'block', textAlign: 'center', backgroundColor: '#eab308', color: '#0f172a', padding: '12px', borderRadius: '10px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px' }}>
             📞 طلب تفصيل درج رخام - اتصل الآن
           </a>
         </article>
